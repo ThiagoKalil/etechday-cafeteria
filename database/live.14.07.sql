@@ -23,7 +23,17 @@ CREATE TABLE IF NOT EXISTS `aluno` (
   `CIDADE` varchar(200) DEFAULT NULL,
   `DATA_NASCIMENTO` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+-- Exportação de dados foi desmarcado.
+-- Copiando estrutura para tabela aulads-30.06.produto
+CREATE TABLE IF NOT EXISTS `produto` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `NOME` varchar(200) DEFAULT NULL,
+  `CUSTO` varchar(200) DEFAULT NULL,
+  `CODIGO_DE_BARRAS` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- Exportação de dados foi desmarcado.
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
