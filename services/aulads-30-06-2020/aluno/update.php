@@ -3,10 +3,14 @@ include '../../../controller/conexao.php';
 
 $resposta = array( ) ;
 
+$nome = $_REQUEST["NOME"];
+$cidade = $_REQUEST["CIDADE"];
+$dataNasc = $_REQUEST["DATA_NASCIMENTO"];
+$id = $_REQUEST["ID"];
 
-$sql = "
-  select * from aluno ";
-
+$sql = "UPDATE aluno 
+SET NOME     = '".$nome."', CIDADE   = '".$cidade."', DATA_NASCIMENTO = '".$dataNasc."' WHERE ID = ".$id."
+";
 
   $retornoBanco = mysqli_query( $conn, $sql ) ;
 
@@ -19,7 +23,7 @@ $sql = "
 
     $resposta["status"] = 0 ;
     $resposta["msg"]    = "success" ;
-    $resposta["data"]   = mysqli_fetch_all( $retornoBanco ) ;
+    $resposta["last_id"] = mysqli_insert_id( $conn ) ;
 
   }
 

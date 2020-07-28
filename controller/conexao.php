@@ -16,8 +16,6 @@
 	//2.1 testar conexão
 	if (!$conn){
 		die("falha na conexão: ".mysqli_connect_error());
-	} else {
-		echo "Conexão com mysql realizada com sucesso." ;
-	}
+	} 
 
 ?>
